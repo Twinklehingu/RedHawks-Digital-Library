@@ -1,0 +1,57 @@
+﻿@page "{id}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
+@model ContosoCrafts.WebSite.Pages.Product.ReadModel
+
+@{ ViewData["Title"] = "Read page"; }
+
+<head>
+    <link href="~/css/image_style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container  p-3 mb-2 bg-white text-dark">
+        <h1 class="title" id="productTitle"><b>@Model.Product.Title</b></h1>
+        <table>
+            <tr>
+                <td><img src="@Model.Product.Image" alt="Avatar" /></td>
+                <td class="book-description"><b>About Book: </b></td>
+                <td class="book-description"> @Model.Product.Description</td>
+                <td class="book-description"><h8><b>Author: </b> @Model.Product.Author</h8></td>
+                <td class="book-description"><b>About Author: </b></td>
+                <td class="book-description"> @Model.Product.Author_Description</td>
+            </tr>
+            <tr>
+                <td class="book-detail"><b>Publisher: </b>@Model.Product.Publisher</td>
+                <td class="book-detail"><b>Publication: </b>@Model.Product.Publication</td>
+                <td class="book-detail"><b>ISBN: </b>@Model.Product.ISBN</td>
+                <td><a href=@Model.Product.Url target="_blank" class="btn btn-primary">Preview</a></td>
+            </tr>
+        </table>
+        </div>
+
+        <h4 class="title">Reviews</h4>
+        <form method="post">
+            <textarea id="comment" placeholder="Write a review" name="comment" class="form-control"></textarea>
+            <br />
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </form>
+        <br />
+
+        <h4 class="drk-md-light-text">All Reviews</h4>
+
+        @if (Model.Product.Comments != null)
+        {
+            @foreach (var comment in Model.Product.Comments)
+            {
+                <h8 class="drk-md-light-text"><b>Customer</b></h8>
+                <p class="drk-md-light-text">@comment</p>
+            }
+        }
+        <br />
+        <div class="row">
+            <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
+            <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
+        </div>
+
+</body>
