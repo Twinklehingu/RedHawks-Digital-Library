@@ -13,8 +13,3 @@
 - [ASP.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy)
 
 13 part series
-# Project link
-   https://localhost:44385/
-   
-   
-   https://github.com/RavitejaPatel/RedHawks.git  (team member)
