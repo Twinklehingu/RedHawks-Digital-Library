@@ -1,5 +1,12 @@
 # RedHawks 
 
+Team Redhawks created a digital library consisting of a collection of selected Computer 
+Science books. Our product invites all levels of expertise who share a common interest in the 
+field of computing. Our team gathered eBooks interrelated to the discipline and will be 
+providing details, description, author(s), publication date, copyright, and etc. Our main 
+objective was to collect these notable resources and have them readily available on one 
+platform.
+
 ## Tutorial
 
 - [ASP.NET Tutorial](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro)
