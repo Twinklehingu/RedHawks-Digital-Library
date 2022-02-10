@@ -21,6 +21,4 @@ platform.
 
 13 part series
 
-# Project link
-   https://localhost:44385/
   
